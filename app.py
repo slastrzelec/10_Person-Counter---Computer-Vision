@@ -164,9 +164,9 @@ def load_detector():
 detector = load_detector()
 
 # Main content
-st.subheader("📤 Upload Your Image")
+    st.subheader("📤 Upload Your Image")
     
-uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png", "bmp"])
+    uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png", "bmp"])
     
 if uploaded_file is not None:
     # Load image
@@ -182,12 +182,12 @@ if uploaded_file is not None:
     
     with col1:
         st.subheader("Original Image")
-        st.image(image, use_container_width=True)
+        st.image(image, width=400)
     
     with col2:
         st.subheader("Detection Results")
         annotated_rgb = cv2.cvtColor(annotated, cv2.COLOR_BGR2RGB)
-        st.image(annotated_rgb, use_container_width=True)
+        st.image(annotated_rgb, width=400)
     
     # Statistics
     st.markdown("---")
