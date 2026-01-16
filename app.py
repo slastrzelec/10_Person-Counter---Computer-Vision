@@ -164,9 +164,9 @@ def load_detector():
 detector = load_detector()
 
 # Main content
-    st.subheader("📤 Upload Your Image")
+st.subheader("📤 Upload Your Image")
     
-    uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png", "bmp"])
+uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png", "bmp"])
     
 if uploaded_file is not None:
     # Load image
