@@ -182,12 +182,12 @@ if uploaded_file is not None:
     
     with col1:
         st.subheader("Original Image")
-        st.image(image, width=400)
+        st.image(image)
     
     with col2:
         st.subheader("Detection Results")
         annotated_rgb = cv2.cvtColor(annotated, cv2.COLOR_BGR2RGB)
-        st.image(annotated_rgb, width=400)
+        st.image(annotated_rgb)
     
     # Statistics
     st.markdown("---")
